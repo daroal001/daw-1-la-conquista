@@ -1,0 +1,12 @@
+version: "3"
+services:
+   web:
+    build:
+        context: .
+    extra_hosts:
+        - "host.docker.internal:host-gateway"
+    ports:
+        - '8080:80'
+    volumes:
+        - './public:/var/www/html'
+    
