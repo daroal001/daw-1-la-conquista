@@ -35,7 +35,7 @@ $mapaOriginal = [
     ["~~~~~~~~~~~~~~~~~~~~~~~~"]
 ];
 
-$mapaOriginal = array_map(fn($fila) => str_split($fila[0]), $mapaOriginal);
+$mapaOriginal = array_map(fn($fila) => str_split($fila[0]), $mapaOriginal); // transformar mapa
 
 // Coordenadas de los impactos de cringe [fila, columna]
 $impactos = [
@@ -79,6 +79,7 @@ function procesarImpactos(&$mapaOriginal, $impactos) { // pasarlo por referencia
 
     return [$mapaOriginal, $totalChill, $afectadoChill];
 }
+
 // 3, 5 y 7 cálculos finales
 function calculos($mapaDaños, $totalChill, $afectadoChill) {
     $s = 0;
